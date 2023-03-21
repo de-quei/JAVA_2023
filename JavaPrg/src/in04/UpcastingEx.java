@@ -1,6 +1,7 @@
 package in04;
 
 public class UpcastingEx {
+	//upcasting = 자동형변환
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
