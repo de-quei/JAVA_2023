@@ -20,7 +20,16 @@ public class HashMapEx {
 				System.out.println("종료");
 				break;
 			}
+			
+			String kor = dic.get(eng);
+			if(kor == null) {
+				System.out.println(eng + "는 없는 단어입니다.");
+			}
+			else {
+				System.out.println(kor);
+			}
 		}
+		
 		
 	}
 
