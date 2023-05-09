@@ -1,20 +1,25 @@
 package pack04;
 
-public class Rectangle {
+public class Rect {
 	private int width;
 	private int height;
-	
 	public Rect(int width, int height) {
 		this.width = width;
 		this.height = height;
 	}
+	
 	public boolean equals(Object obj) {
-		//Object obj=b와 같다
-		Rect p=(Rect)obj;
-		if(this.width*this.height == p.width*p.height)
+		// Object obj = c와 같다.
+		
+		Rect p = (Rect)obj; //다운캐스팅
+		
+		if(this.width * this.height == p.width * p.height) {
 			return true;
-		else
+		}
+		else {
 			return false;
+		}
+			
 	}
 	
 }
