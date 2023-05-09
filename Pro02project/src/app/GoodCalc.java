@@ -4,7 +4,7 @@ import lib.Calculator;
 
 public class GoodCalc extends Calculator {
 	// 추상클래스(Calculator)에서 상속받은 추상메소드는 
-	// GoodCalc 클래스에서 반드시 구현해야 한다. 구현하지 않으면 컴파일 오류 발생!
+	// GoodCalc 클래스에서 오버라이딩으로 반드시 구현해야 한다. 구현하지 않으면 컴파일 오류 발생!
 	@Override
 	public int add(int a, int b) {
 		return a + b;
