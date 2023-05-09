@@ -8,8 +8,9 @@ public class Point {
 		this.x=x;
 		this.y=y;
 	}
+	
 	//재정의 
 	public String toString() {
-		return "Poin("+x+","+y+")";
+		return "Point("+x+","+y+")";
 	}
 }
