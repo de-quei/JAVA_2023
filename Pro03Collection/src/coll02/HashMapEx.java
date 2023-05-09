@@ -13,6 +13,7 @@ public class HashMapEx {
 		dic.put("apple", "사과");
 		
 		Scanner scanner = new Scanner(System.in);
+		
 		while(true) {
 			System.out.print("찾고 싶은 단어 : ");
 			String eng = scanner.next();
