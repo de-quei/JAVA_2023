@@ -11,6 +11,6 @@ public class InterfaceEx {
 		Phone.play();
 		System.out.println("3과 5를 더하면 " + Phone.calculator(3, 5));
 		Phone.Schedule();
+		
 	}
-
 }
