@@ -26,6 +26,7 @@ public class GenericMethodExample {
 			//Double.valueOf(i)는 정수 i값을 실수형으로 변환.
 		}
 		gs = reverse(gs);
+		//gs는 reverse메소드의 리턴값을 받음
 		for(int i = 0; i < 5; i++) {
 			System.out.println(gs.pop());
 		}
