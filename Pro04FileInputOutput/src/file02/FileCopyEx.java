@@ -17,8 +17,8 @@ public class FileCopyEx {
         try {
         	FileReader fr = new FileReader(src);
         	FileWriter fw = new FileWriter(dest);
-        	while((c = fr.read()) != -1) {
-        		fw.write((char)c);
+        	while((c = fr.read()) != -1) {	//fr은 "test.txt"에 있는 데이터를 한 문자씩 읽음
+        		fw.write((char)c);			//fw가 가리키는 "testout.txt"파일에 출력한다.
         	}
         	fr.close();
         	System.out.println(src.getPath() + "를 " + dest.getPath() + "로 복사하였습니다.");
