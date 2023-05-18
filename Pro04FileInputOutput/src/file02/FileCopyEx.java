@@ -3,33 +3,27 @@
 //FileReader클래스와 FileWriter클래스를 사용해서 작성하시오
 package file02;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileCopyEx {
     public static void main(String[] args) {
-        String sourceFile = "C:\\Temp\\test.txt";
-        String destinationFile = "C:\\Temp\\testout.txt";
-
+        File src = new File("C:\\Temp\\test.txt");
+        File dest = new File("C:\\Temp\\testout.txt");
+        int c;
+        
         try {
-            FileReader reader = new FileReader(sourceFile);
-            FileWriter writer = new FileWriter(destinationFile);
-
-            char[] buffer = new char[4096]; // 4KB 버퍼 크기로 설정
-
-            int charsRead;
-            while ((charsRead = reader.read(buffer)) != -1) {
-                writer.write(buffer, 0, charsRead);
-            }
-
-            System.out.println("파일이 성공적으로 복사되었습니다.");
-
-            // 리더와 라이터를 닫습니다.
-            reader.close();
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        	FileReader fr = new FileReader(src);
+        	FileWriter fw = new FileWriter(dest);
+        	while((c = fr.read()) != -1) {
+        		fw.write((char)c);
+        	}
+        	fr.close();
+        	System.out.println(src.getPath() + "를 " + dest.getPath() + "로 복사하였습니다.");
+        }catch(IOException e) {
+        	System.out.println("파일 복사오류!");
         }
     }
 }
